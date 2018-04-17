@@ -39,9 +39,9 @@ class PC1(DirectObject):
 
         self.monster_list = common['monsterList']
         if not self.common['safemode']:
-            wall_shader = loader.loadShader('tiles.sha')
-            black_shader = loader.loadShader('black_parts.sha')
-            floor_shader = loader.loadShader('floor.sha')
+            wall_shader = loader.loadShader('shader/tiles.sha')
+            black_shader = loader.loadShader('shader/black_parts.sha')
+            floor_shader = loader.loadShader('shader/floor.sha')
             self.floor.setShader(floor_shader)
             self.walls.setShader(wall_shader)
             self.black.setShader(black_shader)
@@ -51,7 +51,7 @@ class PC1(DirectObject):
             render.setShaderInput("slight0", self.Ambient)
             render.setShaderInput("plight0", self.pLightNode)
 
-            tex = loader.loadTexture('fog2.png')
+            tex = loader.loadTexture('ui/fog2.png')
             self.proj = render.attachNewNode(LensNode('proj'))
             #lens = OrthographicLens()
             #lens.setFilmSize(3, 3)
@@ -86,9 +86,9 @@ class PC1(DirectObject):
         self.audio3d = common['audio3d']
 
         if not self.common['safemode']:
-            wall_shader = loader.loadShader('tiles.sha')
-            black_shader = loader.loadShader('black_parts.sha')
-            floor_shader = loader.loadShader('floor.sha')
+            wall_shader = loader.loadShader('shader/tiles.sha')
+            black_shader = loader.loadShader('shader/black_parts.sha')
+            floor_shader = loader.loadShader('shader/floor.sha')
             self.floor.setShader(floor_shader)
             self.walls.setShader(wall_shader)
             self.black.setShader(black_shader)
@@ -184,7 +184,7 @@ class PC1(DirectObject):
             render.setShaderInput("slight0", self.Ambient)
             render.setShaderInput("plight0", self.pLightNode)
 
-            tex = loader.loadTexture('fog2.png')
+            tex = loader.loadTexture('ui/fog2.png')
             self.proj = render.attachNewNode(LensNode('proj'))
             #lens = OrthographicLens()
             #lens.setFilmSize(3, 3)
@@ -415,11 +415,11 @@ class PC1(DirectObject):
                                             value=self.common['soundVolume'],
                                             pageSize=10,
                                             thumb_relief=DGG.FLAT,
-                                            thumb_frameTexture='glass3.png',
+                                            thumb_frameTexture='icon/glass3.png',
                                             scale=70,
                                             thumb_frameSize=(
                                                 0.07, -0.07, -0.11, 0.11),
-                                            frameTexture='glass2.png',
+                                            frameTexture='icon/glass2.png',
                                             command=self.optionsSet,
                                             extraArgs=["audio"],
                                             parent=pixel2d)
@@ -431,11 +431,11 @@ class PC1(DirectObject):
                                             value=self.common['musicVolume'],
                                             pageSize=10,
                                             thumb_relief=DGG.FLAT,
-                                            thumb_frameTexture='glass3.png',
+                                            thumb_frameTexture='icon/glass3.png',
                                             scale=70,
                                             thumb_frameSize=(
                                                 0.07, -0.07, -0.11, 0.11),
-                                            frameTexture='glass2.png',
+                                            frameTexture='icon/glass2.png',
                                             command=self.optionsSet,
                                             extraArgs=["music"],
                                             parent=pixel2d)
@@ -998,9 +998,9 @@ class PC2(DirectObject):
         # print self.black, self.walls, self.floor
         self.monster_list = common['monsterList']
         if not self.common['safemode']:
-            wall_shader = loader.loadShader('tiles.sha')
-            black_shader = loader.loadShader('black_parts.sha')
-            floor_shader = loader.loadShader('floor.sha')
+            wall_shader = loader.loadShader('shader/tiles.sha')
+            black_shader = loader.loadShader('shader/black_parts.sha')
+            floor_shader = loader.loadShader('shader/floor.sha')
             self.floor.setShader(floor_shader)
             self.walls.setShader(wall_shader)
             self.black.setShader(black_shader)
@@ -1010,7 +1010,7 @@ class PC2(DirectObject):
             render.setShaderInput("slight0", self.Ambient)
             render.setShaderInput("plight0", self.pLightNode)
 
-            tex = loader.loadTexture('fog2.png')
+            tex = loader.loadTexture('ui/fog2.png')
             self.proj = render.attachNewNode(LensNode('proj'))
             #lens = OrthographicLens()
             #lens.setFilmSize(3, 3)
@@ -1045,9 +1045,9 @@ class PC2(DirectObject):
         self.audio3d = common['audio3d']
 
         if not self.common['safemode']:
-            wall_shader = loader.loadShader('tiles.sha')
-            black_shader = loader.loadShader('black_parts.sha')
-            floor_shader = loader.loadShader('floor.sha')
+            wall_shader = loader.loadShader('shader/tiles.sha')
+            black_shader = loader.loadShader('shader/black_parts.sha')
+            floor_shader = loader.loadShader('shader/floor.sha')
             self.floor.setShader(floor_shader)
             self.walls.setShader(wall_shader)
             self.black.setShader(black_shader)
@@ -1156,7 +1156,7 @@ class PC2(DirectObject):
             render.setShaderInput("slight0", self.Ambient)
             render.setShaderInput("plight0", self.pLightNode)
 
-            tex = loader.loadTexture('fog2.png')
+            tex = loader.loadTexture('ui/fog2.png')
             self.proj = render.attachNewNode(LensNode('proj'))
             #lens = OrthographicLens()
             #lens.setFilmSize(3, 3)
@@ -1369,11 +1369,11 @@ class PC2(DirectObject):
                                             value=self.common['soundVolume'],
                                             pageSize=10,
                                             thumb_relief=DGG.FLAT,
-                                            thumb_frameTexture='glass3.png',
+                                            thumb_frameTexture='icon/glass3.png',
                                             scale=70,
                                             thumb_frameSize=(
                                                 0.07, -0.07, -0.11, 0.11),
-                                            frameTexture='glass2.png',
+                                            frameTexture='icon/glass2.png',
                                             command=self.optionsSet,
                                             extraArgs=["audio"],
                                             parent=pixel2d)
@@ -1385,11 +1385,11 @@ class PC2(DirectObject):
                                             value=self.common['musicVolume'],
                                             pageSize=10,
                                             thumb_relief=DGG.FLAT,
-                                            thumb_frameTexture='glass3.png',
+                                            thumb_frameTexture='icon/glass3.png',
                                             scale=70,
                                             thumb_frameSize=(
                                                 0.07, -0.07, -0.11, 0.11),
-                                            frameTexture='glass2.png',
+                                            frameTexture='icon/glass2.png',
                                             command=self.optionsSet,
                                             extraArgs=["music"],
                                             parent=pixel2d)
@@ -2144,9 +2144,9 @@ class PC3(DirectObject):
         # print self.black, self.walls, self.floor
         self.monster_list = common['monsterList']
         if not self.common['safemode']:
-            wall_shader = loader.loadShader('tiles.sha')
-            black_shader = loader.loadShader('black_parts.sha')
-            floor_shader = loader.loadShader('floor.sha')
+            wall_shader = loader.loadShader('shader/tiles.sha')
+            black_shader = loader.loadShader('shader/black_parts.sha')
+            floor_shader = loader.loadShader('shader/floor.sha')
             self.floor.setShader(floor_shader)
             self.walls.setShader(wall_shader)
             self.black.setShader(black_shader)
@@ -2156,7 +2156,7 @@ class PC3(DirectObject):
             render.setShaderInput("slight0", self.Ambient)
             render.setShaderInput("plight0", self.pLightNode)
 
-            tex = loader.loadTexture('fog2.png')
+            tex = loader.loadTexture('ui/fog2.png')
             self.proj = render.attachNewNode(LensNode('proj'))
             #lens = OrthographicLens()
             #lens.setFilmSize(3, 3)
@@ -2191,9 +2191,9 @@ class PC3(DirectObject):
         self.audio3d = common['audio3d']
 
         if not self.common['safemode']:
-            wall_shader = loader.loadShader('tiles.sha')
-            black_shader = loader.loadShader('black_parts.sha')
-            floor_shader = loader.loadShader('floor.sha')
+            wall_shader = loader.loadShader('shader/tiles.sha')
+            black_shader = loader.loadShader('shader/black_parts.sha')
+            floor_shader = loader.loadShader('shader/floor.sha')
             self.floor.setShader(floor_shader)
             self.walls.setShader(wall_shader)
             self.black.setShader(black_shader)
@@ -2297,7 +2297,7 @@ class PC3(DirectObject):
             render.setShaderInput("slight0", self.Ambient)
             render.setShaderInput("plight0", self.pLightNode)
 
-            tex = loader.loadTexture('fog2.png')
+            tex = loader.loadTexture('ui/fog2.png')
             self.proj = render.attachNewNode(LensNode('proj'))
             #lens = OrthographicLens()
             #lens.setFilmSize(3, 3)
@@ -2527,11 +2527,11 @@ class PC3(DirectObject):
                                             value=self.common['soundVolume'],
                                             pageSize=10,
                                             thumb_relief=DGG.FLAT,
-                                            thumb_frameTexture='glass3.png',
+                                            thumb_frameTexture='icon/glass3.png',
                                             scale=70,
                                             thumb_frameSize=(
                                                 0.07, -0.07, -0.11, 0.11),
-                                            frameTexture='glass2.png',
+                                            frameTexture='icon/glass2.png',
                                             command=self.optionsSet,
                                             extraArgs=["audio"],
                                             parent=pixel2d)
@@ -2543,11 +2543,11 @@ class PC3(DirectObject):
                                             value=self.common['musicVolume'],
                                             pageSize=10,
                                             thumb_relief=DGG.FLAT,
-                                            thumb_frameTexture='glass3.png',
+                                            thumb_frameTexture='icon/glass3.png',
                                             scale=70,
                                             thumb_frameSize=(
                                                 0.07, -0.07, -0.11, 0.11),
-                                            frameTexture='glass2.png',
+                                            frameTexture='icon/glass2.png',
                                             command=self.optionsSet,
                                             extraArgs=["music"],
                                             parent=pixel2d)
@@ -3237,9 +3237,9 @@ class PC4(DirectObject):
         # print self.black, self.walls, self.floor
         self.monster_list = common['monsterList']
         if not self.common['safemode']:
-            wall_shader = loader.loadShader('tiles.sha')
-            black_shader = loader.loadShader('black_parts.sha')
-            floor_shader = loader.loadShader('floor.sha')
+            wall_shader = loader.loadShader('shader/tiles.sha')
+            black_shader = loader.loadShader('shader/black_parts.sha')
+            floor_shader = loader.loadShader('shader/floor.sha')
             self.floor.setShader(floor_shader)
             self.walls.setShader(wall_shader)
             self.black.setShader(black_shader)
@@ -3249,7 +3249,7 @@ class PC4(DirectObject):
             render.setShaderInput("slight0", self.Ambient)
             render.setShaderInput("plight0", self.pLightNode)
 
-            tex = loader.loadTexture('fog2.png')
+            tex = loader.loadTexture('ui/fog2.png')
             self.proj = render.attachNewNode(LensNode('proj'))
             #lens = OrthographicLens()
             #lens.setFilmSize(3, 3)
@@ -3284,9 +3284,9 @@ class PC4(DirectObject):
         self.audio3d = common['audio3d']
 
         if not self.common['safemode']:
-            wall_shader = loader.loadShader('tiles.sha')
-            black_shader = loader.loadShader('black_parts.sha')
-            floor_shader = loader.loadShader('floor.sha')
+            wall_shader = loader.loadShader('shader/tiles.sha')
+            black_shader = loader.loadShader('shader/black_parts.sha')
+            floor_shader = loader.loadShader('shader/floor.sha')
             self.floor.setShader(floor_shader)
             self.walls.setShader(wall_shader)
             self.black.setShader(black_shader)
@@ -3389,7 +3389,7 @@ class PC4(DirectObject):
             render.setShaderInput("slight0", self.Ambient)
             render.setShaderInput("plight0", self.pLightNode)
 
-            tex = loader.loadTexture('fog2.png')
+            tex = loader.loadTexture('ui/fog2.png')
             self.proj = render.attachNewNode(LensNode('proj'))
             #lens = OrthographicLens()
             #lens.setFilmSize(3, 3)
@@ -3636,11 +3636,11 @@ class PC4(DirectObject):
                                             value=self.common['soundVolume'],
                                             pageSize=10,
                                             thumb_relief=DGG.FLAT,
-                                            thumb_frameTexture='glass3.png',
+                                            thumb_frameTexture='icon/glass3.png',
                                             scale=70,
                                             thumb_frameSize=(
                                                 0.07, -0.07, -0.11, 0.11),
-                                            frameTexture='glass2.png',
+                                            frameTexture='icon/glass2.png',
                                             command=self.optionsSet,
                                             extraArgs=["audio"],
                                             parent=pixel2d)
@@ -3652,11 +3652,11 @@ class PC4(DirectObject):
                                             value=self.common['musicVolume'],
                                             pageSize=10,
                                             thumb_relief=DGG.FLAT,
-                                            thumb_frameTexture='glass3.png',
+                                            thumb_frameTexture='icon/glass3.png',
                                             scale=70,
                                             thumb_frameSize=(
                                                 0.07, -0.07, -0.11, 0.11),
-                                            frameTexture='glass2.png',
+                                            frameTexture='icon/glass2.png',
                                             command=self.optionsSet,
                                             extraArgs=["music"],
                                             parent=pixel2d)

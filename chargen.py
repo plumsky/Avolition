@@ -39,7 +39,7 @@ class CharGen(DirectObject):
         self.load()
 
     def load(self):
-        self.font = loader.loadFont('Bitter-Bold.otf')
+        self.font = loader.loadFont('font/Bitter-Bold.otf')
         self.currentLevel = 0
 
         self.common['pc_stat1'] = 50
@@ -109,6 +109,11 @@ class CharGen(DirectObject):
         self.character1.setBin("opaque", 10)
         self.character1.loop("idle")
         self.swingSound = base.loader.loadSfx("sfx/swing2.ogg")
+
+        self.swat = base.loader.loadModel("models/swat")
+        self.swat.reparentTo(self.node)
+        self.swat.setPos(0, 2, 0)
+        self.swat.setScale(.25)
 
         coll_sphere = self.node.attachNewNode(CollisionNode('monsterSphere'))
         coll_sphere.node().addSolid(CollisionSphere(1, 2, 1, 1))
@@ -202,7 +207,7 @@ class CharGen(DirectObject):
         # gui
         self.mp_logo = DirectFrame(frameSize=(-512, 0, 0, 128),
                                    frameColor=(1, 1, 1, 1),
-                                   frameTexture='mp_logo.png',
+                                   frameTexture='ui/mp_logo.png',
                                    state=DGG.NORMAL,
                                    parent=pixel2d)
         self.mp_logo.setPos(256+winX/2, 0, -winY)
@@ -216,7 +221,7 @@ class CharGen(DirectObject):
 
         self.title = DirectFrame(frameSize=(-512, 0, 0, 128),
                                  frameColor=(1, 1, 1, 1),
-                                 frameTexture='select.png',
+                                 frameTexture='ui/select.png',
                                  parent=pixel2d)
         self.title.setPos(256+winX/2, 0, -128)
         self.title.setBin('fixed', 1)
@@ -290,9 +295,9 @@ class CharGen(DirectObject):
                                     value=50,
                                     pageSize=10,
                                     thumb_relief=DGG.FLAT,
-                                    thumb_frameTexture='glass1.png',
+                                    thumb_frameTexture='icon/glass1.png',
                                     #thumb_frameColor=(1,1,1, 1),
-                                    frameTexture='glass2.png',
+                                    frameTexture='icon/glass2.png',
                                     scale=96,
                                     #frameSize=(-100, 0, 0, 100),
                                     command=self.set_slider,
@@ -305,9 +310,9 @@ class CharGen(DirectObject):
                                     value=50,
                                     pageSize=10,
                                     thumb_relief=DGG.FLAT,
-                                    thumb_frameTexture='glass1.png',
+                                    thumb_frameTexture='icon/glass1.png',
                                     #thumb_frameColor=(1,1,1, 1),
-                                    frameTexture='glass2.png',
+                                    frameTexture='icon/glass2.png',
                                     scale=96,
                                     #frameSize=(-100, 0, 0, 100),
                                     command=self.set_slider,
@@ -320,9 +325,9 @@ class CharGen(DirectObject):
                                     value=50,
                                     pageSize=10,
                                     thumb_relief=DGG.FLAT,
-                                    thumb_frameTexture='glass1.png',
+                                    thumb_frameTexture='icon/glass1.png',
                                     #thumb_frameColor=(1,1,1, 1),
-                                    frameTexture='glass2.png',
+                                    frameTexture='icon/glass2.png',
                                     scale=96,
                                     #frameSize=(-100, 0, 0, 100),
                                     command=self.set_slider,

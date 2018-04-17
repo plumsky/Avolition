@@ -253,12 +253,12 @@ class Game(DirectObject):
                 self.bloomBuffer.setClearColor(Vec4(0, 0, 0, 1))
                 self.bloomCamera = base.makeCamera(
                     self.bloomBuffer, lens=base.cam.node().getLens())
-                glowShader = loader.loadShader("glowShader.sha")
+                glowShader = loader.loadShader("shader/glowShader.sha")
                 tempnode = NodePath(PandaNode("temp node"))
                 tempnode.setShader(glowShader)
                 self.bloomCamera.node().setInitialState(tempnode.getState())
                 self.blurBuffer = self.makeFilterBuffer(
-                    self.bloomBuffer,  "Blur X", -2, "blur.sha")
+                    self.bloomBuffer,  "Blur X", -2, "shader/blur.sha")
                 self.finalcard = self.blurBuffer.getTextureCard()
                 self.finalcard.reparentTo(render2d)
                 self.finalcard.setAttrib(
@@ -292,7 +292,7 @@ class Game(DirectObject):
                 self.shadowBuffer, self.shadowCamera)
             sh_tex1 = Texture()
             quad = shadow_manager.renderSceneInto(colortex=sh_tex1)
-            quad.setShader(Shader.load("shadow.sha"))
+            quad.setShader(Shader.load("shader/shadow.sha"))
             quad.setShaderInput("tex1", sh_tex1)
             self.shadow_ts = TextureStage('shadow')
 
